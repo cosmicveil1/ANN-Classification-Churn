@@ -1,0 +1,57 @@
+# Virtual Environments
+venv/
+env/
+ENV/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Jupyter Notebook
+.ipynb_checkpoints
+.jupyter
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Streamlit
+.streamlit/
+.streamlit_cache/
+
+# TensorBoard (optional - exclude if you want to track logs)
+# logs/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Model files (if too large, uncomment to exclude)
+# *.h5
+# *.pkl
