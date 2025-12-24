@@ -3,6 +3,9 @@ venv/
 env/
 ENV/
 .venv/
+Lib/
+Scripts/
+pyvenv.cfg
 
 # Python
 __pycache__/
@@ -45,13 +48,9 @@ MANIFEST
 .streamlit/
 .streamlit_cache/
 
-# TensorBoard (optional - exclude if you want to track logs)
-# logs/
-
 # OS
 Thumbs.db
 .DS_Store
 
-# Model files (if too large, uncomment to exclude)
-# *.h5
-# *.pkl
+# VS Code
+.vscode/
