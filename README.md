@@ -2,6 +2,8 @@
 
 This project uses a deep learning model to predict customer churn in a banking context. The project includes model training, experimentation, and a web-based Streamlit application for making predictions.
 
+**Live Demo:** https://ann-classification-churn-6cqx4prcvp6zbtbh4gnhmp.streamlit.app/
+
 ## Project Overview
 
 **Objective:** Predict whether a customer is likely to leave (churn) a bank based on their profile and behavior.
@@ -160,7 +162,7 @@ The model is trained to minimize binary crossentropy loss with early stopping to
 ## Dependencies
 
 See `requirements.txt` for the complete list:
-- tensorflow==2.15.0
+- tensorflow-cpu==2.20.0
 - pandas
 - numpy
 - scikit-learn
