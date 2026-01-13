@@ -5,20 +5,36 @@ import tensorflow as tf
 from sklearn.preprocessing import StandardScaler, LabelEncoder, OneHotEncoder
 import pickle
 
-model=tf.keras.models.load_model('model.h5')
 
-# Load the scaler
-with open('label_encoder_gender.pkl', 'rb') as f:
-    label_encoder_gender = pickle.load(f)
+@st.cache_resource
+def load_model():
+    return tf.keras.models.load_model('model.h5')
 
-with open('onehot_encoder_geo.pkl', 'rb') as f:
-    onehot_encoder_geo = pickle.load(f)
 
-with open('scaler.pkl', 'rb') as f:
-    scaler = pickle.load(f)
+@st.cache_data
+def load_label_encoder_gender():
+    with open('label_encoder_gender.pkl', 'rb') as f:
+        return pickle.load(f)
+
+
+@st.cache_data
+def load_onehot_encoder_geo():
+    with open('onehot_encoder_geo.pkl', 'rb') as f:
+        return pickle.load(f)
+
+
+@st.cache_data
+def load_scaler():
+    with open('scaler.pkl', 'rb') as f:
+        return pickle.load(f)
 
 
 ##streamlit app
+model = load_model()
+label_encoder_gender = load_label_encoder_gender()
+onehot_encoder_geo = load_onehot_encoder_geo()
+scaler = load_scaler()
+
 st.title("Customer Churn Prediction")
 
 #user inputs

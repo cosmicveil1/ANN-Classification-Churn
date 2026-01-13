@@ -1,4 +1,5 @@
-tensorflow==2.15.0
+# Streamlit Cloud currently runs Python 3.13; use the matching CPU-only TensorFlow build.
+tensorflow-cpu==2.20.0
 pandas
 numpy
 scikit-learn
